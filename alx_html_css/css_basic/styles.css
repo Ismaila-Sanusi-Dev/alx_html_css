@@ -1,38 +1,99 @@
-/* Make the whole page use Flexbox layout */
+/* Flexbox layout setup */
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
-/* Make the <main> area flex too: side-by-side content */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto; /* allow it to grow */
+  flex: auto;
 }
 
-/* Main content should take 2/3 of width */
+/* Make article take 2/3 and scrollable */
 article {
   flex: 2;
-  overflow-y: auto; /* allows scrolling if content overflows */
-  padding: 1rem;
-  background-color: #f0f0f0;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
-/* Sidebar should take 1/3 of width */
+/* Make aside take 1/3 and scrollable */
 aside {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
-  background-color: #e6e6e6;
+  background-color: #dbeafe;
+  padding: 20px;
+  border-left: 4px solid #1e3a8a;
 }
 
-/* Basic styling to header and footer */
-header, footer {
-  background-color: #333;
+/* Header style */
+header {
+  background-color: #1e3a8a;
+  padding: 10px;
   color: white;
-  padding: 1rem;
+}
+
+/* Footer style */
+footer {
+  background-color: #1e3a8a;
+  color: white;
   text-align: center;
+  padding: 10px;
+}
+
+/* Navigation links */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Article headings */
+article h1, article h2, article h3 {
+  color: #1e40af;
+}
+
+article p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Unicode Logo */
+.logo {
+  font-size: 2em;
+  padding-right: 20px;
+  color: gold;
+}
+
+/* Make it responsive on smartphones */
+.works_on_smartphone {
+  flex-direction: column;
 }
